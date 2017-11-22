@@ -1,0 +1,2 @@
+Simulating running a webserver on a "Starter Cloud" VPS from Scaleway because it was the cheapest one I could find that offered me 2 vCPUs at just 3 Euros pcm.
+This gives me 2GB of memory for my webserver to operate within.

@@ -1,0 +1,6 @@
+# All requests go to index.php
+RewriteEngine On
+RewriteBase /
+RewriteRule ^(.*)$ index.php?/$1 [L]
+
+
