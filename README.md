@@ -2,6 +2,8 @@
 
 This tool is useful for testing the differences betwen Nginx and Apache by having the same PHP based website being served up by both webservers. I have been using this tool to demonstrate/test the handling of large bursts of incoming requests.
 
+[Here is a video of me using the tool](https://www.youtube.com/watch?v=EltwnhZw48E).
+
 ### Optimizing Nginx for your core count
 The Nginx configuration has been optimized for a dual core server. If you want to test against a larger core count, then please adjust the nginx/php-fpm-pool.conf file so that `pm.max_children` is set to your number of cores x 2.
 
