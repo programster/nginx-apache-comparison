@@ -74,6 +74,7 @@ function convertCsvToArray($filepath, $hasHeader, $keys=null)
 
 function main()
 {
+    http_response_code(500);
     $data = convertCsvToArray(__DIR__ . '/data.csv', true);
     
     // Sleep for 0.01 seconds to simulate non blocking behaviour like connecting or waiting on db
@@ -82,7 +83,12 @@ function main()
     // Return the data in JSON form.
     $jsonString = json_encode($data);
     header('Content-Type: application/json');
+    
     echo json_encode($data);
+    
+    // Change response code to 200. If we got to here we didnt run out of memory.
+    // https://stackoverflow.com/questions/2331582/catch-php-fatal-error
+    http_response_code(200);
 }
 
 main();
