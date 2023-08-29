@@ -36,14 +36,14 @@ docker rm $NGINX_VERSION_CONTAINER_NAME
 
 # Now start the apache container on port 8000
 docker run -d \
---restart=always \
--p 8000:80 \
---name="$APACHE_VERSION_CONTAINER_NAME" \
-$APACHE_IMAGE_NAME
+  --restart=always \
+  -p 8000:80 \
+  --name="$APACHE_VERSION_CONTAINER_NAME" \
+  $APACHE_IMAGE_NAME
 
 # Start the nginx container on port 8080
 docker run -d \
---restart=always \
--p 8080:80 \
---name="$NGINX_VERSION_CONTAINER_NAME" \
-$NGINX_IMAGE_NAME
+  --restart=always \
+  -p 8080:80 \
+  --name="$NGINX_VERSION_CONTAINER_NAME" \
+  $NGINX_IMAGE_NAME
